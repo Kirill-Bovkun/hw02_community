@@ -16,8 +16,6 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
-urlpatterns = [
-               path('', include('posts.urls', namespace='posts')),
+urlpatterns = [path('', include('posts.urls', namespace='posts')),
                path('group/', include('posts.urls', namespace='group')),
-               path('admin/', admin.site.urls)
-              ]
+               path('admin/', admin.site.urls)]
