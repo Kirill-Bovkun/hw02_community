@@ -9,7 +9,7 @@ def index(request):
     posts = Post.objects.order_by('-pub_date')[:ORDER]
     context = {
                'posts': posts,
-               }
+    }
     return render(request, template, context)
 
 
@@ -20,5 +20,5 @@ def group_posts(request, slug):
     context = {
                'group': group,
                'posts': posts,
-               }
+    }
     return render(request, template, context)
