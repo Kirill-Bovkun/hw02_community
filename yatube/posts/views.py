@@ -8,7 +8,7 @@ def index(request):
     template = 'posts/index.html'
     posts = Post.objects.order_by('-pub_date')[:ORDER]
     context = {
-               'posts': posts,
+     'posts': posts,
     }
     return render(request, template, context)
 
@@ -18,7 +18,7 @@ def group_posts(request, slug):
     group = get_object_or_404(Group, slug=slug)
     posts = group.posts.all()[:ORDER]
     context = {
-               'group': group,
-               'posts': posts,
+     'group': group,
+     'posts': posts,
     }
     return render(request, template, context)
