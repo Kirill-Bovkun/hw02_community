@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="container py-5">
   <h1> Последние обновления на сайте </h1>
   {% for post in posts %}
   {% include 'includes/article.html' %}
@@ -9,5 +8,4 @@
   {% endif %}
   {% if not forloop.last %}<hr>{% endif %}
   {% endfor %}
-</div>
 {% endblock %}
